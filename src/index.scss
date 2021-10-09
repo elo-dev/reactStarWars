@@ -1,0 +1,14 @@
+$color-white: #fff;
+$color-black: #000;
+$color-dark-grey: #10100e;
+
+$spacing-medium: 20px;
+
+$font-famaly: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $color-dark-grey;
+  font-family: $font-famaly;
+}
