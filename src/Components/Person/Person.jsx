@@ -1,14 +1,17 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { API_PEOPLE } from '../../constants/api'
+import { withErrorApi } from '../../hoc-helpers/withErrorApi'
 import { getPeopleId, getPeopleImg } from '../../services/getPeopleData'
 import style from './Person.module.scss'
 
-export const Person = () => {
+const Person = ({ setErrorApi }) => {
   const [people, setPeople] = useState(null)
 
   useEffect(() => {
-    axios.get(API_PEOPLE).then(({ data }) => {
+    const res = axios.get(API_PEOPLE)
+
+    res.then(({ data }) => {
         const peopleList = data.results.map(({ url, name }) => {
             const id = getPeopleId(url)
             const img = getPeopleImg(id)
@@ -18,8 +21,13 @@ export const Person = () => {
             }
         })
       setPeople(peopleList)
+      setErrorApi(false)
+
+    }).catch((error) => {
+      setErrorApi(true)
     })
-  }, [])
+
+  }, [setErrorApi])
 
   return (
     <>
@@ -38,3 +46,5 @@ export const Person = () => {
     </>
   )
 }
+
+export default withErrorApi(Person)
