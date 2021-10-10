@@ -1,3 +1,4 @@
+import PropsTypes from 'prop-types'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { API_PEOPLE } from '@constants/api'
@@ -45,6 +46,10 @@ const Person = ({ setErrorApi }) => {
       )}
     </>
   )
+}
+
+Person.propTypes = {
+  setErrorApi: PropsTypes.func
 }
 
 export default withErrorApi(Person)
