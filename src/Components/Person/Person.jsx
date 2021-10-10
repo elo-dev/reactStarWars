@@ -1,8 +1,8 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { API_PEOPLE } from '../../constants/api'
-import { withErrorApi } from '../../hoc-helpers/withErrorApi'
-import { getPeopleId, getPeopleImg } from '../../services/getPeopleData'
+import { API_PEOPLE } from '@constants/api'
+import { withErrorApi } from '@hoc-helpers/withErrorApi'
+import { getPeopleId, getPeopleImg } from '@services/getPeopleData'
 import style from './Person.module.scss'
 
 const Person = ({ setErrorApi }) => {
