@@ -4,7 +4,8 @@ import {
   HTTPS,
   SWAPI_PEOPLE,
   SWAPI_ROOT,
-  URL_IMG_PERSON,
+  SWAPI_PARAMS,
+  URL_IMG_PERSON
 } from '@constants/api'
 
 const checkProtocol = (url) => {
@@ -13,6 +14,12 @@ const checkProtocol = (url) => {
   }
 
   return HTTP
+}
+
+export const getPeoplePageId = url => {
+  const pos = url.lastIndexOf(SWAPI_PARAMS)
+  const id = url.slice(pos+SWAPI_PARAMS.length)
+  return Number(id)
 }
 
 const getId = (url, category) => {

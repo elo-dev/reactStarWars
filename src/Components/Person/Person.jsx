@@ -3,35 +3,48 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { API_PEOPLE } from '@constants/api'
 import { withErrorApi } from '@hoc-helpers/withErrorApi'
-import { getPeopleId, getPeopleImg } from '@services/getPeopleData'
+import { getPeopleId, getPeopleImg, getPeoplePageId } from '@services/getPeopleData'
 import style from './Person.module.scss'
+import { useLocation } from 'react-router'
+import { PersonNavigation } from '../PersonNavigation/PersonNavigation'
 
 const Person = ({ setErrorApi }) => {
   const [people, setPeople] = useState(null)
+  const [next, setNext] = useState(null)
+  const [previous, setPrevious] = useState(null)
+  const [currentPage, setCurrentPage] = useState(1)
 
-  useEffect(() => {
-    const res = axios.get(API_PEOPLE)
+  const location = useLocation()
+  const page = location.search.replace('?page=', '')
 
-    res.then(({ data }) => {
+  const getResource = async (url) => {
+    await axios.get(url).then(({ data }) => {
         const peopleList = data.results.map(({ url, name }) => {
-            const id = getPeopleId(url)
-            const img = getPeopleImg(id)
+          const id = getPeopleId(url)
+          const img = getPeopleImg(id)
 
-            return{
-                id, img, name
-            }
+          return{
+              id, img, name
+          }
         })
-      setPeople(peopleList)
-      setErrorApi(false)
 
+      setPeople(peopleList)
+      setPrevious(data.previous)
+      setNext(data.next)
+      setCurrentPage(getPeoplePageId(url))
+      setErrorApi(false)
     }).catch((error) => {
       setErrorApi(true)
     })
+  }
 
-  }, [setErrorApi])
+  useEffect(() => {
+    getResource(API_PEOPLE+page)
+  }, [])
 
   return (
     <>
+      <PersonNavigation next={next} prev={previous} currentPage={currentPage} getResource={getResource} />
       {people && (
         <ul className={style.list__container}>
           {people.map(({ id, name, img }) => (
