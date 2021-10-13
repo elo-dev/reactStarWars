@@ -11,16 +11,20 @@
             a{
                 text-decoration: none;
                 color: $color-white;
-                padding: 5px 10px;
+                font-size: 15px;
+                font-weight: bold;
+                padding: 8px 10px;
                 min-width: 70px;
                 text-align: center;
                 transition: .4s;
-                border: 1px solid transparent;
+                border: 2px solid transparent;
+                text-shadow: 0 0 15px $color-yellow;
             }
             :global(a.active){
-                border: 1px solid rgb(105, 0, 196);
+                border: 2px solid rgba($color-violet, .96);
                 border-radius: 3px;
-                text-shadow: 0 0 2px $color-yellow;
+                color: $color-violet;
+                text-shadow: none;
             }
         }
     }

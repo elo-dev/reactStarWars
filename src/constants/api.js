@@ -8,6 +8,7 @@ export const SWAPI_PEOPLE = 'people'
 export const SWAPI_PARAMS = '/?page='
 
 export const API_PEOPLE = HTTPS + SWAPI_ROOT + SWAPI_PEOPLE + SWAPI_PARAMS
+export const API_PERSON_INFO = HTTPS + SWAPI_ROOT + SWAPI_PEOPLE
 
 // visualGuide
 const GUIDE_ROOT_IMG = 'https://starwars-visualguide.com/assets/img/'

@@ -7,7 +7,7 @@ export const Navigation = () => {
         <div className={style.nav}>
             <ul className={style.nav__list}>
                 <li><NavLink to='/' exact>Главная</NavLink></li>
-                <li><NavLink to="/people/?page=1" exact>Персонажи</NavLink></li>
+                <li><NavLink to="/people/?page=1">Персонажи</NavLink></li>
             </ul>
         </div>
     )

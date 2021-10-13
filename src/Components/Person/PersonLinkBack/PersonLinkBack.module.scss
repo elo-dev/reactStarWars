@@ -1,0 +1,15 @@
+@import '../../../index.scss';
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 15px;
+  font-weight: bold;
+  color: $color-yellow;
+  text-decoration: none;
+  &__icon {
+      width: 30px;
+      height: 30px;
+      margin-right: $spacing-small;
+  }
+}
