@@ -1,0 +1,36 @@
+@import '../../../index.scss';
+
+.container{
+    margin-left: $spacing-large;
+    padding: $spacing-medium 0;
+    .list__wrapper{
+        margin: 0;
+        padding: 0;
+        .list__item{
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            color: $color-white;
+            .item__episode{
+                padding: 5px;
+                border-radius: 3px;
+                background-color: $color-red;
+            }
+            .item__col{
+                width: 20px;
+                font-weight: bold;
+                text-align: center;
+            }
+            .item__title{
+                text-shadow: $text-shadow-blue;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1020px){
+    .container{
+        width: 100%;
+        margin: 0;
+    }
+}
