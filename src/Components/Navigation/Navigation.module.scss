@@ -1,11 +1,10 @@
 @import '../../index.scss';
 
 .nav{
-    display: flex;
-    flex-wrap: wrap;
     &__list{
         display: flex;
         list-style-type: none;
+        padding: 0;
         li{
             margin-right: $spacing-medium;
             a{

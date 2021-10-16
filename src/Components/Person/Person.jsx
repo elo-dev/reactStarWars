@@ -2,12 +2,12 @@ import PropsTypes from 'prop-types'
 import React, { useEffect, useState } from 'react'
 import { API_PEOPLE } from '@constants/api'
 import { withErrorApi } from '@hoc-helpers/withErrorApi'
-import style from './Person.module.scss'
 import { useLocation } from 'react-router'
 import { PersonNavigation } from '../PersonNavigation/PersonNavigation'
-import { NavLink } from 'react-router-dom'
 import { getApiResource } from '../../network/api'
 import { getPeopleId, getPeopleImg, getPeoplePageId } from '@services/getPeopleData'
+import { PersonList } from './PersonList/PersonList'
+import { Loader } from '../../assets/Loader/Loader'
 
 const Person = ({ setErrorApi }) => {
   const [people, setPeople] = useState(null)
@@ -50,18 +50,10 @@ const Person = ({ setErrorApi }) => {
   return (
     <>
       <PersonNavigation next={next} prev={previous} currentPage={currentPage} getResource={getResource} />
-      {people && (
-        <ul className={style.list__container}>
-          {people.map(({ id, name, img }) => (
-            <li key={id} className={style.list__item}>
-              <NavLink to={`/people/${id}`}>
-                <img src={img} alt={name} className={style.person__photo} />
-                <p>{name}</p>
-              </NavLink>
-            </li>
-          ))}
-        </ul>
-      )}
+      {people 
+        ? <PersonList people={people} />
+        : <Loader />
+      }
     </>
   )
 }

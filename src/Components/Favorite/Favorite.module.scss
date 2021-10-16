@@ -1,0 +1,16 @@
+@import '../../index.scss';
+
+.title{
+  color: $color-yellow;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .bookmarkEmpty {
+    margin-top: 70px;
+    width: 350px;
+    height: 250px;
+  }
+}

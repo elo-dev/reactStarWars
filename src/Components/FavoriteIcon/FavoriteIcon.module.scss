@@ -1,0 +1,28 @@
+.container{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    margin-left: auto;
+    flex-shrink: 0;
+    .counter{
+        position: absolute;
+        top: -5px;
+        right: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: bold;
+        width: 20px;
+        height: 20px;
+        color: black;
+        border-radius: 50%;
+    }
+    .icon{
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
