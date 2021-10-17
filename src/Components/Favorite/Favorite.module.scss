@@ -1,7 +1,7 @@
 @import '../../index.scss';
 
 .title{
-  color: $color-yellow;
+  color: var(--theme-default-header);
 }
 
 .container {

@@ -8,7 +8,8 @@ module.exports = function override(config, env) {
       '@services': 'src/services',
       '@routes': 'src/routes',
       '@hooks': 'src/hooks',
-      '@store': 'src/store'
+      '@store': 'src/store',
+      '@context': 'src/context'
     })(config)
     return config;
   }

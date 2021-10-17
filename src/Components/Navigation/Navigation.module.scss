@@ -4,7 +4,15 @@
     &__list{
         display: flex;
         list-style-type: none;
+        align-items: center;
         padding: 0;
+        .logo{
+            width: 60px;
+            height: 60px;
+            margin-right: $spacing-large;
+            object-fit: cover;
+            object-position: center center;
+        }
         li{
             margin-right: $spacing-medium;
             a{
