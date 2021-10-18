@@ -48,6 +48,9 @@ export const Navigation = () => {
         <li>
           <NavLink to="/favorites">Избранные</NavLink>
         </li>
+        <li>
+          <NavLink to="/search">Поиск</NavLink>
+        </li>
         <FavoriteIcon />
       </ul>
     </div>
