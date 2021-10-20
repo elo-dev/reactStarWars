@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7ad3b430.chunk.css",
+    "main.js": "/static/js/main.198bcadd.chunk.js",
+    "main.js.map": "/static/js/main.198bcadd.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.19e9f013.js",
+    "runtime-main.js.map": "/static/js/runtime-main.19e9f013.js.map",
+    "static/js/2.41fe28ec.chunk.js": "/static/js/2.41fe28ec.chunk.js",
+    "static/js/2.41fe28ec.chunk.js.map": "/static/js/2.41fe28ec.chunk.js.map",
+    "static/css/3.68c975d2.chunk.css": "/static/css/3.68c975d2.chunk.css",
+    "static/js/3.4705acbe.chunk.js": "/static/js/3.4705acbe.chunk.js",
+    "static/js/3.4705acbe.chunk.js.map": "/static/js/3.4705acbe.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/3.68c975d2.chunk.css.map": "/static/css/3.68c975d2.chunk.css.map",
+    "static/css/main.7ad3b430.chunk.css.map": "/static/css/main.7ad3b430.chunk.css.map",
+    "static/js/2.41fe28ec.chunk.js.LICENSE.txt": "/static/js/2.41fe28ec.chunk.js.LICENSE.txt",
+    "static/media/bookmarkEmpty.29c57d5c.svg": "/static/media/bookmarkEmpty.29c57d5c.svg",
+    "static/media/bookmarks.8e722f7f.svg": "/static/media/bookmarks.8e722f7f.svg",
+    "static/media/dark-side.e0f8cab7.jpg": "/static/media/dark-side.e0f8cab7.jpg",
+    "static/media/deleteValue.42cf9f6f.svg": "/static/media/deleteValue.42cf9f6f.svg",
+    "static/media/droid.de165dd8.svg": "/static/media/droid.de165dd8.svg",
+    "static/media/falcon.c1d0a8d1.jpg": "/static/media/falcon.c1d0a8d1.jpg",
+    "static/media/favorite.1887db4f.svg": "/static/media/favorite.1887db4f.svg",
+    "static/media/favoriteFill.06dd850b.svg": "/static/media/favoriteFill.06dd850b.svg",
+    "static/media/goBack.cb8af4b7.svg": "/static/media/goBack.cb8af4b7.svg",
+    "static/media/light-side.eebc5217.jpg": "/static/media/light-side.eebc5217.jpg",
+    "static/media/lightsaber.eb7d4cd6.svg": "/static/media/lightsaber.eb7d4cd6.svg",
+    "static/media/loader.db413263.svg": "/static/media/loader.db413263.svg",
+    "static/media/PersonFilms.module.scss": "/static/media/mainBg.03fca445.jpg",
+    "static/media/notFound.2104c54b.png": "/static/media/notFound.2104c54b.png",
+    "static/media/space-station.7a027c6e.svg": "/static/media/space-station.7a027c6e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.19e9f013.js",
+    "static/js/2.41fe28ec.chunk.js",
+    "static/css/main.7ad3b430.chunk.css",
+    "static/js/main.198bcadd.chunk.js"
+  ]
+}
